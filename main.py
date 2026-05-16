@@ -84,11 +84,11 @@ def main(users, action=False):
  
     target_hour = 19
     target_minute = 59
-    target_second = 40
+    target_second = 58
     target_wait=0
     logging.info(f"等待到 {target_hour:02d}:{target_minute:02d}:{target_second:02d} 再开始抢座...")
 
-    while False:
+    while True:
         now_ts = time.time() + (8 * 3600 if action else 0)
         now = time.localtime(now_ts)
         if (now.tm_hour == target_hour and
